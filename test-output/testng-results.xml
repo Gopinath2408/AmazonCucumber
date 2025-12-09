@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-09T10:48:22 IST" name="Default suite" finished-at="2025-12-09T10:50:40 IST" duration-ms="138504">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.loginRunner@2002fc1d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-12-09T10:48:22 IST" name="Default test" finished-at="2025-12-09T10:50:40 IST" duration-ms="138504">
+      <class name="Runner.loginRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.loginRunner@2002fc1d]" started-at="2025-12-09T10:48:22 IST" name="setUpClass" finished-at="2025-12-09T10:48:23 IST" duration-ms="612" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3cd26422]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.loginRunner@2002fc1d]" started-at="2025-12-09T10:48:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-09T10:48:41 IST" duration-ms="17865" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify the title and product page of Amazon."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Asserting the titile and product page"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [iQOO 15 (Legend, 16GB RAM, 512GB Storage) | Fastest Snapdragon 8 Elite Gen 5 Processor* | Origin OS 6 - Out of The Box* | Samsung 2K M14 Lead OLED Display - First time Ever in Android] but found [OnePlus Nord CE5 | Massive 7100mAh Battery | MediaTek Dimensity 8350 Apex | Powered by OnePlus AI | 8GB + 256GB | Black Infinity]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [iQOO 15 (Legend, 16GB RAM, 512GB Storage) | Fastest Snapdragon 8 Elite Gen 5 Processor* | Origin OS 6 - Out of The Box* | Samsung 2K M14 Lead OLED Display - First time Ever in Android] but found [OnePlus Nord CE5 | Massive 7100mAh Battery | MediaTek Dimensity 8350 Apex | Powered by OnePlus AI | 8GB + 256GB | Black Infinity]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at stepdef.product_check.check_the_producr_name(product_check.java:52)
+at ✽.Check the producr name.(file:///C:/Users/gopinath.s2/eclipse-workspace/Amazon_Project/Resources/Features/checkproduct.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.loginRunner@2002fc1d]" started-at="2025-12-09T10:48:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-09T10:49:27 IST" duration-ms="46065" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify the search with different values"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validating the search options"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.loginRunner@2002fc1d]" started-at="2025-12-09T10:49:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-09T10:49:59 IST" duration-ms="32191" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify the search with different values"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validating the search options"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.loginRunner@2002fc1d]" started-at="2025-12-09T10:49:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-09T10:50:40 IST" duration-ms="41429" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify the search with different values"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validating the search options"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.loginRunner@2002fc1d]" started-at="2025-12-09T10:50:40 IST" name="tearDownClass" finished-at="2025-12-09T10:50:40 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- Runner.loginRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
