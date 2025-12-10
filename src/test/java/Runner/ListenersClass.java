@@ -14,15 +14,16 @@ public class ListenersClass implements ITestListener {
         extent.attachReporter(reporter);
     }
 
+    
     @Override
     public void onTestStart(ITestResult result) {
-    	System.out.println("Execution of test ["+result.getName()+"]Started");
+//    	System.out.println("Execution of test ["+result.getName()+"]Started");
         test = extent.createTest(result.getMethod().getMethodName());
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-    	System.out.println("Execution of test ["+result.getName()+"] ended");
+//    	System.out.println("Execution of test ["+result.getName()+"] ended");
 
         test.pass("Test Passed");
     }

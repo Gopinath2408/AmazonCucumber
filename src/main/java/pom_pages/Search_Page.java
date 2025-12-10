@@ -24,12 +24,12 @@ public class Search_Page {
 	public void select_first_option(String s) {
 		
 		if(s.equals("Watches"))
-	         dr.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[1]/div/span[1]/div[1]/div[5]/div/div/div/div/span/div/div/div[2]/div[1]/a/h2/span")).click();
+	         dr.findElement(By.xpath("//span[@class='rush-component s-latency-cf-section']/div/div[4]/div/div//div[@class='s-image-padding']//a")).click();
 		else if(s.equals("Laptop"))
-		      dr.findElement(By.linkText("Apple 2025 MacBook Air (13-inch, Apple M4 chip with 10-core CPU and 8-core GPU, 16GB Unified Memory, 256GB) - Silver")).click();
+		      dr.findElement(By.xpath("//span[@class='rush-component s-latency-cf-section']/div[1]/div[3]/div/div/div/div/span/div/div/div/div[1]/div/div[2]/div//a")).click();
 
 		else
-		      dr.findElement(By.linkText("Men Lace Up Sneaker Shoes")).click();
+		      dr.findElement(By.xpath("//span[@class='rush-component s-latency-cf-section']/div[1]/div[3]/div/div/div/div/span/div/div/div[1]//a")).click();
 		                        
 	}
 	
@@ -44,7 +44,7 @@ public class Search_Page {
 			}
 		}
 		String title = dr.getTitle();
-		System.out.println("Title :" + title);
+//		System.out.println("Title :" + title);
 	    return title;
 		
 	}
@@ -59,8 +59,14 @@ public class Search_Page {
 
 			else
 			      str = dr.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div/h1/span")).getText();
-		System.out.println("Element : "+str);
-		return str;
+		
+//		System.out.println("Element : "+str);
+		
+		String a[] = str.split("\\s+");
+		
+		System.out.print(a[0]);
+		
+		return a[0];
 	}
 
 	

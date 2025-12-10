@@ -9,24 +9,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
+import Utility.Browser;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pom_pages.Search_Page;
 
-public class Search_product {
+public class Search_product extends Browser{
 	Search_Page sp;
 
-	static WebDriver dr;
 
 	@Given("Launch the amazon website")
 	public void launch_the_amazon_website() {
-		dr = new EdgeDriver();
-		dr.get("https://www.amazon.in/");
-		dr.manage().window().maximize();
 		sp = new Search_Page(dr);
 	}
-
+	
 	@When("Search the value {string} in search bar")
 	public void search_the_value_in_search_bar(String s) {
 		sp.search(s);
@@ -44,12 +41,6 @@ public class Search_product {
 		String exp = sp.getTitile();
 		String act = sp.ExtractName(s);
 		assertTrue(exp.contains(act));
-
-	}
-
-	@Then("Close the browser")
-	public void close_the_browser() {
-		dr.quit();
 
 	}
 

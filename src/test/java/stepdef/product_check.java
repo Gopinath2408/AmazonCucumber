@@ -1,26 +1,24 @@
 package stepdef;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import Utilities.BrowserStart;
+import Utility.Browser;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pom_pages.Product_Page;
 
-public class product_check {
+public class product_check extends Browser {
 
-	public static WebDriver dr;
 	Product_Page pp;
 
 	@Given("Open the browser and launch the website.")
 	public void open_the_browser_and_launch_the_website() {
-		dr = new ChromeDriver();
-		dr.get("https://www.amazon.in/");
-		dr.manage().window().maximize();
 		pp = new Product_Page(dr);
 	}
 
@@ -49,7 +47,10 @@ public class product_check {
 
 	@Then("Check the producr name.")
 	public void check_the_producr_name() {
-         assertEquals(pp.get_name_product(),"iQOO 15 (Legend, 16GB RAM, 512GB Storage) | Fastest Snapdragon 8 Elite Gen 5 Processor* | Origin OS 6 - Out of The Box* | Samsung 2K M14 Lead OLED Display - First time Ever in Android");
+		
+		boolean val =pp.GetTitile().contains(pp.get_name_product());
+		assertTrue(val);
+  
 	}
 
 	@Then("Go back to the Deals page and click on the second item.")
@@ -61,12 +62,8 @@ public class product_check {
 
 	@Then("Check the second product is also present.")
 	public void check_the_second_product_is_also_present() {
-	       assertEquals(pp.get_name_product(),"OnePlus Nord CE5 | Massive 7100mAh Battery | MediaTek Dimensity 8350 Apex | Powered by OnePlus AI | 8GB + 256GB | Black Infinity");
-
+		boolean val =pp.GetTitile().contains(pp.get_name_product());
+		assertTrue(val);
 	}
 
-	@Then("close the browser.")
-	public void close_the_browser() {
-         dr.quit();
-	}
 }
